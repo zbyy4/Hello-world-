@@ -1,5 +1,13 @@
-print("hello world! blablbaa")
+import turtle
 
-print("Hey, wake up!")
+tt = turtle.Turtle()
 
-print("boring!")
+def polygon(side,length):
+    angle = 360/side
+    for i in range(side):
+        tt.forward(length)
+        tt.left(angle)
+
+polygon(6,100)
+
+tt.screen.mainloop()
