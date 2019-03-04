@@ -42,7 +42,7 @@ def show():
     print("You total number of moves is :", total_moves)
 
 
-print("WELCOME TO MY SLIDING PUZZLE!")
+print("WELCOME TO MY 3X3 SLIDING PUZZLE!")
 print("(u = up, d = down, l = left, r = right)")
 while True:
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
