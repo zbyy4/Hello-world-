@@ -42,6 +42,8 @@ def show():
     print("You total number of moves is :", total_moves)
 
 
+print("WELCOME TO MY SLIDING PUZZLE!")
+print("(u = up, d = down, l = left, r = right)")
 while True:
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     while True:
@@ -72,8 +74,8 @@ while True:
             show()
             continue
     print("Yeah! You made it!\n" + "Do you want to try again?") 
-    continue_choice = input("Enter y to restart or enter other key to quit:")
-    if continue_choice == 'y':
+    continue_choice = input("Enter r to restart or enter other key to quit:")
+    if continue_choice == 'r':
         continue
     else:
         break     
