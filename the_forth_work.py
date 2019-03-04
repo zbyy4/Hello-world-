@@ -46,9 +46,9 @@ print("WELCOME TO MY 3X3 SLIDING PUZZLE!")
 print("(u = up, d = down, l = left, r = right)")
 while True:
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    while True:
+    x = 0
+    while x % 2 != 0 or x == 0:
         random.shuffle(numbers)
-        x = 0
         for number in numbers:
             for number_ahead in numbers[:numbers.index(number)]:
                 if number_ahead > number:
@@ -56,12 +56,8 @@ while True:
         position = numbers.index(9)
         if position == 1 or position == 3 or position == 5 or position == 7:
             x += 1
-        if x % 2 == 0:
-            numbers = [str(number) for number in numbers]
-            numbers[position] = " "
-            break
-        else:
-            continue
+    numbers = [str(number) for number in numbers]
+    numbers[position] = " "
     total_moves = 0
     show()
     while numbers != ['1', '2', '3', '4', '5', '6', '7', '8', ' ']:
