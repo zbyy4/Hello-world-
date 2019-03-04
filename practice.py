@@ -8,6 +8,6 @@ def polygon(side,length):
         tt.forward(length)
         tt.left(angle)
 
-polygon(6,100)
+polygon(100,5)
 
 tt.screen.mainloop()
