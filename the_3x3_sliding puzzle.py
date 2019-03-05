@@ -27,7 +27,7 @@ def move():
 
 def show():
     for index in range(0,n**2,n):
-        print(" ".join(numbers[index:index+n]))
+        print("  ".join(numbers[index:index+n]))
     print("You total number of moves is :", total_moves)
 
 
