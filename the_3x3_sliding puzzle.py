@@ -36,7 +36,10 @@ print("(u = up, d = down, l = left, r = right)")
 while True:
     n = 3
     max_length = len(str(n**2))+2
+    total_moves = 0
     numbers = [i for i in range(1,n**2+1)]
+    criterion = [str(i).ljust(max_length) for i in range(1,n**2+1)]
+    criterion[-1] = " ".ljust(max_length)
     while True:
         random.shuffle(numbers)
         x = 0
@@ -53,9 +56,6 @@ while True:
             break
         else:
             continue
-    total_moves = 0
-    criterion = [str(i).ljust(max_length) for i in range(1,n**2+1)]
-    criterion[-1] = " ".ljust(max_length)
     show()
     while numbers != criterion:
         key = input("Use'u', 'd', 'l', 'r' to move the number:")
