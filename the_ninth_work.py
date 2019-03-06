@@ -25,16 +25,16 @@ def create_numbers():
 def move():
     global position
     global total_moves
-    if key == 'u':
+    if key == 'w':
         special_positions = [i for i in range(n**2-n,n**2)]
         steps = n
-    elif key == 'd':
+    elif key == 's':
         special_positions = [i for i in range(0,n)]
         steps = -n 
-    elif key == 'l':
+    elif key == 'a':
         special_positions = [i for i in range(n-1,n**2,n)]
         steps = 1
-    elif key == 'r':
+    elif key == 'd':
         special_positions = [i for i in range(0,n**2-2,n)]
         steps = -1
     if position not in special_positions:
@@ -53,10 +53,17 @@ def show():
 
 
 
-print("WELCOME TO MY '3*3' SLIDING PUZZLE!")
-print("(u = up, d = down, l = left, r = right)")
+print("WELCOME TO MY 'N*N' SLIDING PUZZLE!")
+print("(w = up, s = down, a = left, d = right)")
 while True:
-    n = 3
+    try:
+        n = int(input("Please enter a number n:"))
+        if n < 2:
+            print("The number is too small.")
+            continue
+    except:
+        print("You made a mistake.Try again.")
+        continue
     max_length = len(str(n**2))+2
     total_moves = 0
     criterion = [str(i).ljust(max_length) for i in range(1,n**2+1)]
@@ -64,8 +71,8 @@ while True:
     create_numbers()
     show()
     while numbers != criterion:
-        key = input("Use'u', 'd', 'l', 'r' to move the number:")
-        if key in ['u', 'd', 'l', 'r']:
+        key = input("Use'w', 's', 'a', 'd' to move the number:")
+        if key in ['w', 's', 'a', 'd']:
             move()
             show()
         else:
