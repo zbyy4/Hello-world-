@@ -10,3 +10,4 @@ def binarySum(L, low, high):
 
 a = [1,2,3,4,5]
 print(binarySum(a,0,len(a)-1))
+print("hello!")
