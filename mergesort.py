@@ -30,11 +30,8 @@ def mergeSort(a):
 
 
 n = 10000
-a = []
-for i in range(n):
-    a.append(random.randint(0,10000))
-
+a = [[2,3], [4,5], [0,2], [4,7]]
 startime  = time()
-mergeSort(a)
+print(mergeSort(a))
 endtime = time()
 print("Time:", endtime-startime)

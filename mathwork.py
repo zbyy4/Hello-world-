@@ -1,11 +1,19 @@
-import math
+def binarySearch(L, num, low, high):
+    if low > high:
+        return low
+    mid  = (low + high)//2
 
-def comb(n,m):
-    return math.factorial(n)//(math.factorial(n-m)*math.factorial(m))
+    if L[mid] == num:
+        return mid
+    elif L[mid] < num:
+        return binarySearch(L, num, mid+1, high)
+    else:
+        return binarySearch(L, num, low, mid-1)
 
-n = 0
-for i in range(0,5):
-    c = comb(100,i)
-    n += c*(0.05**i)*(0.95**(100-i))*(5-i)*700
+def binaryinsert(L, m):
+    k = binarySearch(L, m, 0, len(L)-1)
+    L.insert(k, m)
+    return L
 
-print(n)
+a = [-1, 4, 9, 45, 50, 78, 93, 120, 149, 191, 200, 201]
+print(binaryinsert(a, 3))

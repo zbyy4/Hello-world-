@@ -1,0 +1,14 @@
+Question 1:
+(1) user can construct a linked list in .py file. They can either construct linked list with format Node(element,pointer). Or use LinkedQueue in my file to construct.
+(2) please import q1.py
+(3) call nodesNumber(pointer): here parameter "pointer" is the head of the linked list
+(4) then the return of nodesNumber() function is the number of nodes in the singly linked listQuestion 2:
+(1) user can construct a linked list or import q2.py and call LinkedQueue() to construct.
+(2) call quickSort(head): parameter "head" is the head of the singly linked list.
+(3) put the return of quickSort() into printout(head), then you can get the sorted linked list printed out. This function helps to visualize the sorted linked list.
+
+
+Question 3:
+(1) open q3.py in terminal or IDLE and run it.
+(2) type in number of disks in Tower of Hanoi. Only integer is allowed.
+(3) then moving steps and sequence will be shown.
